@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>휴가 등록 캘린더</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>📅 휴가 등록 캘린더</h1>
+
+  <div class="form">
+    <label>이름: <input type="text" id="name" /></label>
+    <label>시작일: <input type="date" id="startDate" /></label>
+    <label>종료일: <input type="date" id="endDate" /></label><br/>
+
+    <label><input type="checkbox" name="type" value="보상 / 하루" /> 보상 / 하루</label>
+    <label><input type="checkbox" name="type" value="반차 / 오전" /> 반차 / 오전</label>
+    <label><input type="checkbox" name="type" value="반차 / 오후" /> 반차 / 오후</label>
+
+    <button onclick="submitVacation()">휴가 등록</button>
+  </div>
+
+  <p class="notice">※ 데이터를 삭제하려면 해당 날짜의 이름을 클릭하세요.</p>
+
+  <div class="nav-box">
+    <button onclick="changeMonth(-1)">⬅️ 이전달</button>
+    <span id="monthLabel">6월 2025</span>
+    <button onclick="changeMonth(1)">다음달 ➡️</button>
+  </div>
+
+  <div class="calendar" id="calendar"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
